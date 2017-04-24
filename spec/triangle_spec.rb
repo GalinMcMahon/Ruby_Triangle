@@ -16,8 +16,14 @@ describe('Triangle') do
   end
   describe('#scalene?') do
     it("will determine whether the triangle is scalene") do
-      test_triangle = Triangle.new(3,2,2)
+      test_triangle = Triangle.new(3,2,4)
       expect(test_triangle.scalene?()).to(eq(true))
+    end
+  end
+  describe('#triangle?') do
+    it("will determine whether the sides do not make a triangle") do
+      test_triangle = Triangle.new(3,2,2)
+      expect(test_triangle.triangle?()).to(eq(true))
     end
   end
 end
